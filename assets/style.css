@@ -1,0 +1,22 @@
+body {
+	background-image: url(images/background.jpg);
+	background-position: center;
+	height: 100vh;
+}
+
+.jumbotron {
+	background: rgba(28,30,34, 0.9); 
+	padding-top: 0px;
+	margin-top: 75px;
+}
+
+.page-header {
+	margin-top: 0px;
+}
+
+.col-lg-12, 
+.col-md-12, 
+.col-sm-12, 
+.col-xs-12{
+	text-align: center;
+}
