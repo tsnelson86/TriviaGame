@@ -10,16 +10,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron">
+				<!-- Header Content -->
 				<div class="page-header">
   				<h1>GAME OF THRONES TRIVA <br /></h1><h3>Brought to you by Trevor Nelson</h3>
 				</div>
+				<!-- Start Button -->
 				<div id="startButtonDiv">
 					<button type="button" class="btn btn-success btn-lg" id="startButton">Start Game</button>
 				</div>
+				<!-- Main Game Section -->
 				<div id="gameSectionDiv">
+					<!-- Timer P Tag -->
 					<p id="timeLeft">Time Remaining: <span id="timeRemaining"></span></p>
 					<p><span id="userMessage"></span></p>
 
+					<!-- Section to Display for Questions/Answers -->
 					<div id="guessOptions-pane">
 						<button type="button" class="guess btn btn-primary btn-lg" id="guess1"></button>
 						<button type="button" class="guess btn btn-primary btn-lg" id="guess2"></button>
@@ -27,15 +32,18 @@
 						<button type="button" class="guess btn btn-primary btn-lg" id="guess4"></button>
 					</div>	
 
+					<!-- Section to Display if Guess was Wrong-->
 					<div id="wrongGuess-pane">
 						<p class="wrongGuess">The correct answer was <span id="correctAnswer"></span>.</p>
 						<div id="wrongGuessImgDiv"></div>
 					</div>
 
+					<!-- Section to Display if Guess was Right -->
 					<div id="correctGuess-pane">
 						<div id="correctGuessImgDiv"></div>
 					</div>
 
+					<!-- Section to Display at End of Game -->
 					<div id="endGame-pane">
 						<p class="endgamep">Correct Answers: <span id="correctGuesses"></span></p>
 						<p class="endgamep">Incorrect Answers: <span id="wrongGuesses"></span></p>

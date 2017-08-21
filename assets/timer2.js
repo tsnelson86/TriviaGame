@@ -1,3 +1,4 @@
+//Array that assigns all questions, answers, and assets.
 var questions = [
 		{"name": "question1",
 		"ask": "What was the name of Bran's Direwold?",
@@ -91,6 +92,7 @@ var questions = [
 	}
 ];
 
+//Defining variables used in the game.
 var timer = 30;
 var correctAnswers = 0;
 var wrongAnswers = 0;
@@ -99,13 +101,16 @@ var intervalId = 0;
 var correctAnswer = "";
 var questionCounter = 0;
 
+//Calls starting screen function to create the start button.
 startingScreen();
 
+//If start button is pressed, populates with first question and starts timer.
 $("#startButton").click(function(){
 	nextQuestion();
 	timerFun();
 });
 
+//Collects user's guess and references answer for a given question - displays proper response.
 $(".guess").click(function(e){
 	if ($(this).text() == correctAnswer) {
 		clearInterval(intervalId);
@@ -117,11 +122,16 @@ $(".guess").click(function(e){
 	}
 });
 
+//Starting screen hides the game div and shows the start button div.
 function startingScreen () {
 	$("#gameSectionDiv").hide();
 	$("#startButtonDiv").show();
 }
 
+//Function controlling the timer.
+//Beginning at 30 seconds, decrements by 1 until an answer is given or timer reaches 0.
+//If timer reaches 0 calls the outoftime function.
+//Always displays up-to-date time.
 function timerFun (){
 	$("#timeRemaining").text(timer);
 	intervalId = setInterval(decrement, 1000);
@@ -137,6 +147,8 @@ function timerFun (){
 	}
 }
 
+//Function increments question counter by 1 and restarts the timer.
+//If all questions have been asked, calls end game function.
 function pause () {
 	if (questionCounter < 9){
 		questionCounter++;
@@ -149,6 +161,8 @@ function pause () {
 	}
 }
 
+//Hides unneeded divs and shows proper divs for the next question.
+//Shows next question with appropriate answers and logs correct answer for use in click function.
 function nextQuestion () {
 	$("#startButtonDiv").hide();
 	$("#endGame-pane").hide();
@@ -164,6 +178,7 @@ function nextQuestion () {
 	correctAnswer = questions[questionCounter].answer;
 }
 
+//If answer was marked correct, updates the Dom, increments correct guesses by 1, and calls pause function.
 function correctAnswerFun () {
 	$("#guessOptions-pane").hide();
 	$("#correctGuess-pane").show();
@@ -173,6 +188,7 @@ function correctAnswerFun () {
 	correctAnswers++;
 }
 
+//If answer was marked correct, updates the Dom, increments incorrect guesses by 1, and calls pause function.
 function wrongAnswerFun () {
 	$("#guessOptions-pane").hide();
 	$("#wrongGuess-pane").show();
@@ -182,6 +198,7 @@ function wrongAnswerFun () {
 	wrongAnswers++;
 }
 
+//If answer was not given in time, updates the Dom, increments no guesses by 1, and calls pause function.
 function outOfTimeFun () {
 	$("#guessOptions-pane").hide();
 	$("#wrongGuess-pane").show();
@@ -192,6 +209,8 @@ function outOfTimeFun () {
 	noAnswers++;
 }
 
+//Function that hides/shows the proper divs.
+//Also contains onclick function to reset game variables and restart the game.
 function endGameFun() {
 	$("#startButtonDiv").hide();
 	$("#guessOptions-pane").hide();
