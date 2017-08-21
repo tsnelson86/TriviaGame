@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron">
 				<div class="page-header">
-  				<h1>GAME OF THRONES TRIVA <br /><small>Brought to you by Trevor Nelson</small></h1>
+  				<h1>GAME OF THRONES TRIVA <br /></h1><h3>Brought to you by Trevor Nelson</h3>
 				</div>
 				<div id="startButtonDiv">
 					<button type="button" class="btn btn-success btn-lg" id="startButton">Start Game</button>
@@ -27,20 +27,20 @@
 						<button type="button" class="guess btn btn-primary btn-lg" id="guess4"></button>
 					</div>	
 
-					<div id="endGame-pane">
-						<p class="endgamep">Correct Answers: <span id="correctGuesses"></span></p>
-						<p class="endgamep">Incorrect Answers: <span id="correctGuesses"></span></p>
-						<p class="endgamep">Unanswered Questions: <span id="correctGuesses"></span></p>
-						<button type="button" class="btn btn-success btn-lg" id="startOver">Start Over?</button>
-					</div>
-
 					<div id="wrongGuess-pane">
-						<p class="wrongGuess">Wrong! The correct answer was <span id="correctAnswer"></span></p>
-						<div id="wrongGuessImgDiv">img-rounded</div>
+						<p class="wrongGuess">The correct answer was <span id="correctAnswer"></span>.</p>
+						<div id="wrongGuessImgDiv"></div>
 					</div>
 
 					<div id="correctGuess-pane">
-						<div id="correctGuessImgDiv">img-rounded</div>
+						<div id="correctGuessImgDiv"></div>
+					</div>
+
+					<div id="endGame-pane">
+						<p class="endgamep">Correct Answers: <span id="correctGuesses"></span></p>
+						<p class="endgamep">Incorrect Answers: <span id="wrongGuesses"></span></p>
+						<p class="endgamep">Unanswered Questions: <span id="unansweredGuesses"></span></p>
+						<button type="button" class="btn btn-success btn-lg" id="startOver">Start Over?</button>
 					</div>
 
 				</div>
@@ -48,6 +48,6 @@
 		</div>
 	</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/timer.js"></script>
+	<script type="text/javascript" src="assets/timer2.js"></script>
 </body>
 </html>

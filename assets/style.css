@@ -4,6 +4,10 @@ body {
 	height: 100vh;
 }
 
+small {
+	font-size: 10px;
+}
+
 .jumbotron {
 	background: rgba(28,30,34, 0.9); 
 	padding-top: 0px;
@@ -19,4 +23,42 @@ body {
 .col-sm-12, 
 .col-xs-12{
 	text-align: center;
+}
+
+#startButtonDiv {
+	display: none;
+}
+
+#startButton {
+	font-size: 28px;
+	padding: 25px 50px 25px 50px;
+}
+
+#gameSectionDiv {
+	display: none;
+}
+
+#guessOptions-pane {
+	display: none;
+}
+
+#guessOptions-pane button {
+	display: block;
+	margin: 15px auto;
+}
+
+#wrongGuess-pane{
+	display: none;
+}
+
+#correctGuess-pane {
+	display: none;
+}
+
+#endGame-pane {
+	display: none;
+}
+
+.answerImg {
+	max-width: 400px;
 }
